@@ -50,7 +50,24 @@ public:
 
 int main()
 {
-    Rectangle rec; // Creating an instance of class Rectangle and naming the object rec
-    rec.setLength(100);
-    cout << rec.getLength() << endl;
+    Rectangle rec;  // Creating an instance of class Rectangle and naming the object rec
+    double len = 0; // Creating varibale len to store length given by user
+    double wid = 0; // Creating varibale wid to store width goven by user
+
+    // Ask for and store length
+    cout << "Enter your length: ";
+    cin >> len;
+
+    // Ask for and store width
+    cout << "Enter your width: ";
+    cin >> wid;
+
+    rec.setLength(len);
+    rec.setWidth(wid);
+
+    cout << endl;
+    cout << "Length: " << rec.getLength() << endl;
+    cout << "Width: " << rec.getWidth() << endl;
+    cout << "Area: " << rec.calcArea() << endl;
+    cout << "Perimeter: " << rec.calcPerimeter() << endl;
 }
