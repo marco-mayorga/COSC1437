@@ -65,9 +65,7 @@ def main():
             # makes a basic cpp function under my info
             cppfile.write("#include <iostream>\n\nusing namespace std;")
             cppfile.write(
-                "\n\nint main()\n{\n\t//1.Variables\n\t//2.Ask User for 'type in here'\n\t//3.Store user answer")
-            cppfile.write(
-                "\n\t//4.Calculations and logic\n\t//5.Display\n\treturn 0; \n}")
+                "\n\nclass *Name* \n{} \n\nint main()\n{}")
         print("File Creation succesful.")
 
     # Checks if Windows
@@ -118,9 +116,7 @@ def main():
             # makes a basic cpp function under my info
             cppfile.write("#include <iostream>\n\nusing namespace std;")
             cppfile.write(
-                "\n\nint main()\n{\n\t//1.Variables\n\t//2.Ask User for 'type in here'\n\t//3.Store user answer")
-            cppfile.write(
-                "\n\t//4.Calculations and logic\n\t//5.Display\n\treturn 0; \n}")
+                "\n\nclass Name \n{\t\n}; \n\nint main()\n{\t\n}")
         print("File Creation succesful.")
 
 
