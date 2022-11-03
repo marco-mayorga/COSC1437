@@ -7,50 +7,18 @@ October 30, 2022
 */
 
 #include <iostream>
+#include "Rectangle.h"
+#include "Rectangle.cpp"
 
 using namespace std;
 
-class Rectangle
-{
-private:
-    double length = 0; // Initializing length to be 0
-    double width = 0;  // Initializing width to be 0
-public:
-    // Setters // Mutators
-    void setLength(double len) // Sets the Length given in the parameter into the database
-    {
-        length = len;
-    }
-    void setWidth(double wid) // Sets the Width given in the parameter into the database
-    {
-        width = wid;
-    }
-
-    // getters  //accesors
-    double getLength() const // allows users to retrieve length
-    {
-
-        return length;
-    }
-    double getWidth() const // allows users to retrieve width
-    {
-        return width;
-    }
-
-    // Specialty Functions
-    double calcArea() // return area of rectangle
-    {
-        return length * width;
-    }
-    double calcPerimeter()
-    {
-        return (2 * length) + (2 * width);
-    }
-};
-
 int main()
 {
-    Rectangle rec;  // Creating an instance of class Rectangle and naming the object rec
+    Rectangle rec;          // Creating an instance of class Rectangle and naming the object rec
+    Rectangle rec2(10, 30); // starting with len 10 amd width 30
+    Rectangle rec3(50);     // Starting with 50 as the length
+    Rectangle rec4(rec2);   // starting with everything to know about rec2
+
     double len = 0; // Creating varibale len to store length given by user
     double wid = 0; // Creating varibale wid to store width goven by user
 
@@ -70,4 +38,22 @@ int main()
     cout << "Width: " << rec.getWidth() << endl;
     cout << "Area: " << rec.calcArea() << endl;
     cout << "Perimeter: " << rec.calcPerimeter() << endl;
+
+    cout << endl;
+    cout << "Length: " << rec2.getLength() << endl;
+    cout << "Width: " << rec2.getWidth() << endl;
+    cout << "Area: " << rec2.calcArea() << endl;
+    cout << "Perimeter: " << rec2.calcPerimeter() << endl;
+
+    cout << endl;
+    cout << "Length: " << rec3.getLength() << endl;
+    cout << "Width: " << rec3.getWidth() << endl;
+    cout << "Area: " << rec3.calcArea() << endl;
+    cout << "Perimeter: " << rec3.calcPerimeter() << endl;
+
+    cout << endl;
+    cout << "Length: " << rec4.getLength() << endl;
+    cout << "Width: " << rec4.getWidth() << endl;
+    cout << "Area: " << rec4.calcArea() << endl;
+    cout << "Perimeter: " << rec4.calcPerimeter() << endl;
 }
